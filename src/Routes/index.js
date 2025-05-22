@@ -7,6 +7,7 @@ import Profile from "../pages/Profile"
 import Customers from "../pages/Customers"
 import New from "../pages/New"
 import Home from "../pages/Home"
+import NotFound from "../pages/NotFound"
 
 const RoutesApp = () => {
 
@@ -22,6 +23,8 @@ const RoutesApp = () => {
       <Route path="/customers" element={<Private> <Customers /> </Private>} />
       <Route path="/new" element={<Private> <New /> </Private>} />
       <Route path="/new/:id" element={<Private> <New /> </Private>} />
+
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
