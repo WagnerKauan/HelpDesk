@@ -6,12 +6,15 @@ import Private from "./Private"
 import Profile from "../pages/Profile"
 import Customers from "../pages/Customers"
 import New from "../pages/New"
+import Home from "../pages/Home"
 
 const RoutesApp = () => {
 
   return(
     <Routes>
-      <Route path="/" element={<SignIn />}/>
+
+      <Route path="/" element={<Home />}/>
+      <Route path="/login" element={<SignIn />}/>
       <Route path="/register" element={<SignUp />}/>
       
       <Route path="/dashboard" element={<Private> <Dashboard /> </Private>}/>

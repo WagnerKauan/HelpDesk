@@ -1,0 +1,271 @@
+.container-home {
+  height: 100%;
+  background: linear-gradient(135deg, #121212, #1a1a1a, #232323);
+}
+
+.header-home {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-home {
+  color: #2563eb;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.buttons-home {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  & a {
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #FFF;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #1d4db6;
+    }
+  }
+}
+
+
+.main-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #121212, #1a1a1a, #232323);
+  padding-inline: 10px;
+}
+
+.hero-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+}
+
+.texts-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  & h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(270deg,#0077ff,#00aaff,#00cfff,#0077ff);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 8s ease infinite;
+  }
+
+  & p {
+    color: #cfcfcf;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto 0;
+  }
+
+
+  & a {
+    max-width: fit-content;
+    background-color: #0077FF;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    transition: ease 0.3s;
+
+    &:hover {
+      background-color: #055dc2;
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-home {
+    grid-template-columns: 1fr;
+    padding-inline: 10px;
+    gap: 40px;
+  }
+
+  .texts-home h1 {
+    font-size: 2.5rem;
+  }
+
+  .texts-home p {
+    font-size: 1.1rem;
+  }
+
+  .logo-home {
+    font-size: 1.8rem;
+  }
+}
+
+/* 📱 Celular (abaixo de 768px) */
+@media screen and (max-width: 768px) {
+  .header-home {
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5rem;
+  }
+
+  .logo-home {
+    font-size: 1.7rem;
+  }
+
+  .buttons-home {
+    gap: 10px;
+  }
+
+  .texts-home h1 {
+    font-size: 2.2rem;
+  }
+
+  .texts-home p {
+    font-size: 1rem;
+  }
+
+  .texts-home button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Mini devices (abaixo de 480px) */
+@media (max-width: 480px) {
+  .texts-home h1 {
+    font-size: 1.9rem;
+  }
+
+  .texts-home p {
+    font-size: 0.95rem;
+  }
+
+  .texts-home {
+    gap: 16px;
+  }
+
+  .logo-home {
+    font-size: 1.5rem;
+  }
+
+  .buttons-home button {
+    padding: 12px;
+    width: 100%;
+  }
+}
+
+
+
+.metrics-section {
+  background: linear-gradient(135deg, #121212, #1a1a1a);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.metrics-grid {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.metric-card {
+  background-color: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 16px;
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.number {
+  color: #00aaff;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.label {
+  color: white;
+  margin: 5px 0 0;
+  font-size: 1.1rem;
+}
+
+/* 👇 Responsividade pesada */
+@media (max-width: 768px) {
+  .metrics-grid {
+    gap: 24px;
+  }
+
+  .metric-card {
+    padding: 24px 32px;
+    min-width: 160px;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .metric-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .label {
+    font-size: 0.95rem;
+  }
+}

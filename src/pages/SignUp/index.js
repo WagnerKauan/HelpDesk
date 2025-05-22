@@ -4,9 +4,10 @@ import schemaSignUp from '../../schemas/schemaSignUp.js'
 import { toast } from 'react-toastify'
 import { AuthContext } from '../../contexts/Auth.js'
 import { motion } from 'framer-motion'  // importação power
+import { FaArrowLeftLong } from "react-icons/fa6";
 
-import '../SignIn/SignIn.css'
 import logo from '../../assets/img/logo.png'
+import '../SignIn/SignIn.css'
 
 
 const SignUp = () => {
@@ -42,6 +43,9 @@ const SignUp = () => {
     >
 
       <div className='login'>
+        <Link className='goHome' to="/" >
+          <FaArrowLeftLong size={20} color='#1d4db6'/>
+        </Link>
         <div className='login-area'>
           <img src={logo} alt='Logo do sistema de chamados' />
         </div>
@@ -51,7 +55,7 @@ const SignUp = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-        >
+        > 
           <h1>Registrar</h1>
           <input value={nome} onChange={e => setNome(e.target.value)} type='text' placeholder='nome' />
           <input value={email} onChange={e => setEmail(e.target.value)} type='email' placeholder='seu@email.com' />
